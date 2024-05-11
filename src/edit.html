@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Cruise</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo1.ico"/>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta name="theme-color" content="#4e8ef7" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script type="module" src="./js/main.js"></script>
+  </head>
+
+  <body class="bg-custom-1">
+    <div class="navbar p-2 bg-custom-2 sticky-top">
+        <div class="col">
+            <a class="btn" href="profile.html" role="button"><i class="bi bi-arrow-left" style="font-size: 24px;"></i></a>
+        </div>
+        <div class="col text-end">
+          <span class="fs-6 fw-bold">Car Cruise</span>  
+        <img src="assets/imgs/logo1.png" alt="" width="35px" height="35px">
+            
+        </div>
+      </div>
+      <div class="col py-2 text-center">
+        <div class="d-flex justify-content-center mb-3">
+          <img id="selectedAvatar" src="assets/imgs/profile.jpg"
+          class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="example placeholder" />
+      </div>
+        <div class="d-flex justify-content-center p-2">
+          <div data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary btn-rounded">
+              <label class="form-label text-white m-1" for="customFile2">Change photo</label>
+              <input type="file" class="form-control d-none" id="customFile2" onchange="displaySelectedImage(event, 'selectedAvatar')" />
+          </div>
+      </div>
+      </div>
+      <div class="container-fluid bg-custom-1 p-2">
+        <div class="form-floating mb-2">
+          <input type="email" class="form-control" id="floatingInput" placeholder="Name">
+          <label for="floatingInput">Name:</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input type="email" class="form-control" id="floatingInput" placeholder="Address">
+          <label for="floatingInput">Address:</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input type="email" class="form-control" id="floatingInput" placeholder="phone number">
+          <label for="floatingInput">Phone Number:</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input type="email" class="form-control" id="floatingInput" placeholder="Email">
+          <label for="floatingInput">Email:</label>
+        </div>
+
+        <div class="col text-end">
+           <a href="profile.html" class="btn btn-secondary btn-1" role="button">Save</a>
+          
+          </div>
+         
+      </div>
+
+      <nav class="navbar bg-custom-2 fixed-bottom ">
+        <div class="container">
+          <div class="col d-flex justify-content-evenly align-items-center gap-2">
+            
+            <a class="btn" href="main.html" role="button"><i class="fa fa-home" style="font-size: 1.5rem;"></i><br>Home</a>
+            <a class="btn" href="notification.html" role="button">
+              <i class="fa fa-bell" style="font-size: 1.5rem;"></i><br>Notification</a>
+            <a class="btn" href="transaction.html" role="button"><i class="fa fa-credit-card" style="font-size: 1.5rem;"></i><br>Transaction</a>
+            <a class="btn" href="profile.html" role="button"><i class="fa fa-user-circle" style="font-size: 1.5rem;"></i><br>Profile</a>
+      
+         </div>
+        </div>
+     </nav>
+     
+  </body>
+</html>

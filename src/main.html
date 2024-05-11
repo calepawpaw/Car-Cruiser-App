@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Cruise</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo1.ico"/>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta name="theme-color" content="#4e8ef7" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  
+  <body>
+
+    <div class="header p-2 bg-custom-2 sticky-top">
+      <img src="assets/imgs/logo1.png" alt="" width="35px" height="35px">
+      <span class="fs-6 fw-bold">Car Cruise</span>
+    </div>
+
+    <div class="container-fluid bg-custom-1 py-3">
+   
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/imgs/437022733_3759945924276828_7456768961315967092_n.png" class="d-block w-100" alt="" height="200px" width="280px">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/imgs/435444878_1424263755147485_3388478102613182377_n.png" class="d-block w-100" alt="..." height="200px" width="280px">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <hr>
+      
+    </div>
+  
+</div>
+
+
+<div class="container-fluid bg-custom-1">
+
+  <div class="container">
+    <h1 class="fw-bold">Recommendations</h1>
+    <div class="row d-flex justify-content-center align-items-center">
+
+      <div class="col-11 col-sm-6 col-md-6">
+        <div class="card shadow m-2">
+            <div class="card-ttle p-2 text-center">
+              <h4 class="title fw-bold"><strong>Sedan</strong></h4>
+            </div>
+            <img src="./assets/imgs/mitsubishi.png" alt="..." class="card-img-top img-fit">
+             <div class="card-body">
+            <div class="card-text">
+              <i class="fa-solid fa-car" style="color: black;"></i>
+              <span class="card-text text-center fw-bold">Brand: Mitsubishi</span>
+            </div>
+
+            <div class="card-text">
+              <i class="fa-solid fa-car" style="color: black;"></i>
+              <span class="card-text fw-bold">Model: 2017 Mitsubishi Lancer</span>
+            </div>
+
+            <div class="text-center">
+                <a class="btn btn-secondary" href="page1.html" role="button">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-11 col-sm-6 col-md-6">
+        <div class="card shadow m-2">
+         <div class="card-ttle p-2 text-center">
+              <h4 class="title fw-bold"><strong>Pick Up</strong></h4>
+         </div>
+         <img src="assets/imgs/pickup02-home.png" alt="..." class="card-img-top img-fit">
+          <div class="card-body">
+              <div class="card-text fw-bold">
+                <i class="fa-solid fa-car" style="color: black;"></i>
+                <span class="card-text fw-bold"><strong>Brand:</strong>Ford</span>
+              </div>
+
+              <div class="card-text">
+                <i class="fa-solid fa-car" style="color: black;"></i>
+                <span class="card-text fw-bold"><strong>Model:</strong> 2020 Ford Ranger</span>
+              </div>
+
+            <div class="text-center">
+                <a class="btn btn-secondary" href="page2.html" role="button">View more</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+ 
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-11 col-sm-6 col-md-6">
+        <div class="card shadow m-2">
+            <div class="card-ttle p-2 text-center">
+              <h4 class="title fw-bold"><strong>SUV</strong></h4>
+            </div>
+            <img src="assets/imgs/toyota02-home.png" alt="..." class="card-img-top img-fit">
+             <div class="card-body">
+            <div class="card-text">
+              <i class="fa-solid fa-car" style="color: black;"></i>
+              <span class="card-text fw-bold">Brand: Toyota</span>
+            </div>
+
+            <div class="card-text">
+              <i class="fa-solid fa-car" style="color: black;"></i>
+              <span class="card-text fw-bold">Model: 2024 Toyota Fortuner</span>
+            </div>
+
+            <div class="text-center">
+                <a class="btn btn-secondary" href="page3.html" role="button">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-11 col-sm-6 col-md-6">
+        <div class="card shadow m-2">
+         <div class="card-ttle p-2 text-center">
+              <h4 class="title fw-bold"><strong>Van</strong></h4>
+         </div>
+         <img src="./assets/imgs/nissan.png" alt="..." class="card-img-top img-fit">
+          <div class="card-body">
+              <div class="card-text fw-bold">
+                <i class="fa-solid fa-car" style="color: black;"></i>
+                <span class="card-text fw-bold"><strong>Brand:</strong> Nissan</span>
+              </div>
+
+              <div class="card-text">
+                <i class="fa-solid fa-car" style="color: black;"></i>
+                <span class="card-text fw-bold"><strong>Model:</strong> Nissan NV350</span>
+              </div>
+
+            <div class="text-center">
+                <a class="btn btn-secondary" href="page4.html" role="button">View more</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ </div>
+      
+    <nav class="navbar bg-custom-2 sticky-bottom">
+      <div class="container">
+        <div class="col d-flex justify-content-evenly align-items-center gap-2">
+          
+          <a class="btn" href="main.html" role="button"><i class="fa fa-home" style="font-size: 1.5rem;"></i><br>Home</a>
+          <a class="btn" href="notification.html" role="button">
+            <i class="fa fa-bell" style="font-size: 1.5rem;"></i><br>Notification</a>
+          <a class="btn" href="transaction.html" role="button"><i class="fa fa-credit-card" style="font-size: 1.5rem;"></i><br>Transaction</a>
+          <a class="btn" href="profile.html" role="button"><i class="fa fa-user-circle" style="font-size: 1.5rem;"></i><br>Profile</a>
+    
+       </div>
+      </div>
+   </nav>
+
+  </body>
+</html>

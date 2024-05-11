@@ -1,0 +1,11 @@
+{
+  "appId": "com.carcruise.app",
+  "appName": "Car Cruise",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

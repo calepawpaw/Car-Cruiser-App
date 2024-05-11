@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Cruise</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="assets/icon/logo1.ico"/>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <meta name="theme-color" content="#4e8ef7" />
+
+   
+    <script type="module" src="./js/auth/login.js"></script>
+      
+  </head>
+
+  <body>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+      <div class="col-11 col-sm-10 col-md-9 text-center">
+        
+          <img src="./assets/imgs/logo2.png">
+        
+        <form id="login_form" class="form rounder bg-white shadow p-4">
+          <h3 class="text-dark fw-bolder fs-4 mb-2">
+            Sign in to Car Cruise
+          </h3>
+
+          <div class="alert alert-success d-none" role="alert"></div>
+          <div class="alert alert-danger d-none" role="alert"></div>
+          
+            <div class="form-floating mb-3">
+              <input type="email"
+                class="form-control"
+                name="email"
+                id="email" 
+                placeholder="Email"
+                required
+              >
+              <label for="email">Email</label>
+            </div>
+            
+            <div class="form-floating mb-3">
+              <input type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+              >
+              <label for="password">Password</label>
+            </div>
+            <div class="fw-normal text-muted mb-4">New here? <a href="register.html" class="text-primary fw-bold text-decoration-none">Register Here.</a>
+            </div>
+              <button type="submit" class="btn btn-secondary btn-1">Login</button>
+        </form>
+      </div>
+    </div>
+
+
+    
+  </body>
+</html>

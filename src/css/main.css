@@ -1,0 +1,130 @@
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg-custom-1{
+  /* background-image: linear-gradient(90deg,rgb(21, 52, 72),rgb(19, 93, 102),rgb(21, 52, 72));  */
+  background-image: linear-gradient(90deg,rgb(19, 93, 102),rgb(80, 114, 123),rgb(19, 93, 102));
+}
+.bg-custom-2{
+  /* background-image: linear-gradient(90deg,rgb(19, 93, 102),rgb(154, 200, 205),rgb(19, 93, 102)); */
+    background-image: linear-gradient(180deg,rgb(19, 93, 102),#C0C0C0,rgb(19, 93, 102));
+}
+
+.custom-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-container-1 {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar {
+    background-color: black;
+}
+
+.container input:focus {
+    box-shadow: none;
+  }.card .img-fit {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.row .card{
+    height: 100%;
+    background-color: red;
+}
+
+.card-body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+    .card .img-fit {
+        aspect-ratio: 1.45/1;
+    }
+}
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Centers the image horizontally */
+  }
+  .container {
+    max-width: 600px; /* Adjust this value as needed */
+    margin: 0 auto;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .col {
+    text-align: left;
+  }
+
+  /* Added style for icons */
+  .icon {
+    width: 24px; /* Adjust the width as needed */
+    margin-right: 10px;
+  }
+  
+  /* Add custom styles for responsiveness */
+.header img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .header .fs-6 {
+    font-size: 1rem;
+  }
+  
+  .table th,
+  .table td {
+    font-size: 0.8rem; /* Reduce font size for smaller screens */
+  }
+  
+  .navbar .btn {
+    font-size: 0.8rem; /* Reduce font size for smaller screens */
+  }
+  
+  @media (min-width: 576px) {
+    .header img {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .header .fs-6 {
+      font-size: 1.2rem;
+    }
+  
+    .table th,
+    .table td {
+      font-size: 0.9rem; /* Increase font size for medium screens */
+    }
+  
+    .navbar .btn {
+      font-size: 0.9rem; /* Increase font size for medium screens */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .navbar .btn {
+      font-size: 1rem; /* Increase font size for large screens */
+    }
+  }

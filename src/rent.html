@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Cruise</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo1.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta name="theme-color" content="#4e8ef7" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <script type="module" src="./js/main.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar p-1 bg-custom-2 static-top">
+      <div class="col">
+          <a class="btn" href="main.html" role="button"><i class="bi bi-arrow-left" style="font-size: 24px;"></i></a>
+      </div>
+      <div class="col text-end">
+    <span class="fs-6 fw-bold">Car Cruise</span>  
+      <img src="assets/imgs/logo1.png" alt="" width="35px" height="35px">
+      
+      </div>
+    </div>
+
+    <div class="container-fluid  bg-custom-1 d-flex align-items-center justify-content-center vh-100">
+            <div class="container custom-container-1">
+                    <div class="row p-3 text-center">
+                        <h3 class="fw-bold"><i class="fa-solid fa-file-invoice"></i> Information </h3>
+                        <div class="col-sm-6 py-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control form-control-sm gap-1" placeholder="address" aria-label="address">
+                                <label for="address"><i class="fas fa-map-marker-alt"></i> Address</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 py-2">
+                            <select class="form-select form-select-lg" aria-label="Default select example">
+                                <option selected><i class="fas fa-id-card"></i>Select ID</option>
+                                <option value="1">National ID</option>
+                                <option value="2">Driver License</option>
+                              </select>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control form-control-sm gap-1" placeholder="ID Number" aria-label="ID">
+                                <label for="ID"><i class="fas fa-id-card"></i> ID Number</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 py-2">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="pickupDate" placeholder="Pick Up Date">
+                                <label for="pickupDate"><i class="far fa-calendar-alt"></i> Pick Up Date</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="returnDate" placeholder="Return Date">
+                                <label for="returnDate"><i class="far fa-calendar-alt"></i> Return Date</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 py-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Destination" aria-label="destination">
+                                <label for="destination"><i class="fas fa-map-marker-alt"></i> Destination</label>
+                            </div>
+                        </div>
+                    </div>
+    
+                <div class="container">
+                    <div class="row p-2 text-center">
+                        <div class="col-12">
+                            <h3 class="fw-bold"><i class="fas fa-bag-shopping"></i> Payment Method</h3>
+                            <select class="form-select form-select-lg" aria-label="Default select example">
+                                <option selected>Select Method</option>
+                                <option value="1">G cash</option>
+                                <option class="bis bi-cash" value="2">Cash</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                         <div class="col-12 p-2">
+                            <a href="main.html" class=" btn btn-secondary"> Check Out</a>
+                         </div>
+                    </div>
+                </div>
+          </div>  
+    </div>
+    
+
+  </body>
+</html>
