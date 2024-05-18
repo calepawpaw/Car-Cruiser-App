@@ -19,6 +19,7 @@ let { data, error } = await supabase.auth.signInWithPassword({
 
 let session = data.session;
 let user = data.user;
+const userId = data.user.id;
 
 console.log(user);
 
@@ -26,6 +27,7 @@ if (session != null) {
   // Store tokens for API
   localStorage.setItem("access_token", session.access_token);
   localStorage.setItem("refresh_token", session.refresh_token);
+  localStorage.setItem("userId", userId);
 
   // Retrieve user information
   let { data: user_info, error } = await supabase

@@ -33,95 +33,34 @@
     
     <div class="header p-2 bg-custom-2 sticky-top">
       <img src="assets/imgs/logo1.png" alt="" width="35px" height="35px">
-      <span class="fs-6 fw-bold">Car Cruise</span>
+      <span class="fs-6 fw-bold">Transaction</span>
     </div>
-
-   <div class="container ">
-    <div class="list-group m-2 ">
-        <a href="#" class="list-group-item bg-secondary list-group-item-action" aria-current="true">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Transaction:</h5>
-          </div>
-        </a>
-        <div class="table-responsive">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Car Type</th>
-                <th scope="col">Pick Up Date</th>
-                <th scope="col">Return Date</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Status</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jon Kevin Cale</td>
-                <td> 0909 795 1675</td>
-                <td>SUV</td>
-                <td>April 30, 2024</td>
-                <td>April 31, 2024</td>
-                <td>Butuan City</td>
-                <td><div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Approved
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                  <label class="form-check-label" for="flexCheckChecked">
-                    Disapproved
-                  </label>
-                </div></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Michelle Boromeo</td>
-                <td> 0919 657 2345</td>
-                <td>Pick-Up</td>
-                <td>April 18, 2024</td>
-                <td>April 23, 2024</td>
-                <td>Hinatuan Surigao del sur</td>
-                <td><div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Approved
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                  <label class="form-check-label" for="flexCheckChecked">
-                    Disapproved
-                  </label>
-                </div></td>
-              </tr>
     
-            </tbody>
-          </table>
-        </div>
-    </div>
-   </div>
-
-      
-      <nav class="navbar bg-custom-2 fixed-bottom">
         <div class="container">
-          <div class="col d-flex justify-content-evenly align-items-center gap-2">
-            
-            <a class="btn" href="admin.html" role="button"><i class="fa fa-home" style="font-size: 1.5rem;"></i><br>Home</a>
-            <a class="btn" href="notification1.html" role="button">
-              <i class="fa fa-bell" style="font-size: 1.5rem;"></i><br>Notification</a>
-            <a class="btn" href="transaction1.html" role="button"><i class="fa fa-credit-card" style="font-size: 1.5rem;"></i><br>Transaction</a>
-            <a class="btn" href="profile1.html" role="button"><i class="fa fa-user-circle" style="font-size: 1.5rem;"></i><br>Profile</a>
-      
-         </div>
+          <div class="list-group m-2" id="transactions-list">
+            <!-- Transactions will be dynamically inserted here -->
+          </div>
         </div>
-     </nav>
-    
+
+
+    <nav class="navbar bg-custom-2 fixed-bottom">
+      <div class="container">
+        <div class="col d-flex justify-content-evenly align-items-center gap-2">
+          <a class="btn" href="admin.html" role="button">
+            <i class="fa fa-home" style="font-size: 1.5rem;"></i><br>Home
+          </a>
+          <a class="btn" href="notification1.html" role="button">
+            <i class="fa fa-bell" style="font-size: 1.5rem;"></i><br>Notification
+          </a>
+          <a class="btn" href="transaction1.html" role="button">
+            <i class="fa fa-credit-card" style="font-size: 1.5rem;"></i><br>Transaction
+          </a>
+          <a class="btn" href="profile1.html" role="button">
+            <i class="fa fa-user-circle" style="font-size: 1.5rem;"></i><br>Profile
+          </a>
+        </div>
+      </div>
+    </nav>
+
   </body>
 </html>
