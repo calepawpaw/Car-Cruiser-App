@@ -35,6 +35,8 @@ if (session != null) {
       .select("*")
       .eq("user_id", user.id);
 
+      localStorage.setItem("role", user_info[0].role);
+      
   if (user_info.length > 0) {
       const user_role = user_info[0].role;
 
