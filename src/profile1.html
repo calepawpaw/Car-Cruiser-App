@@ -19,23 +19,31 @@
       src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
     ></script>
 
-    <link rel="icon" type="image/x-icon" href="./assets/icon/logo1.ico"/>
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo1.ico" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/index.css" />
     <meta name="theme-color" content="#4e8ef7" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    
+    <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/system/profile1.js"></script>
   </head>
 
-  <body style="background-image: linear-gradient(90deg,rgb(19, 93, 102),rgb(80, 114, 123),rgb(19, 93, 102));">
+  <body style="background-image: linear-gradient(90deg, rgb(19, 93, 102), rgb(80, 114, 123), rgb(19, 93, 102))">
     <nav class="navbar header p-2 bg-custom-2 sticky-top">
       <div class="container-fluid">
         <div class="col">
-            <a class="btn" href="admin.html" role="button"><i class="bi bi-arrow-left" style="font-size: 24px;"></i></a>
+          <a class="btn" href="main.html" role="button"><i class="bi bi-arrow-left" style="font-size: 24px;"></i></a>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
@@ -46,68 +54,65 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="admin.html">Home</a>
+                <a class="nav-link active text-white" aria-current="page" href="main.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="notification1.html">Notification</a>
+                <a class="nav-link text-white" href="notification.html">Notification</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="transaction1.html">Transaction</a>
+                <a class="nav-link text-white" href="transaction.html">Transaction</a>
               </li>
               <li class="nav-item">
-                
-                <button class="btn btn-light w-100" id="btn_logout" > Logout </button>
-
+                <a class="nav-link text-white" href="#" id="btn_logout">
+                  <button class="btn btn-light w-100">Logout</button>
+                </a>
               </li>
-
             </ul>
           </div>
         </div>
       </div>
     </nav>
+    <!-- Alert Notifications -->
+    <div class="alert alert-success d-none" role="alert"></div>
+    <div class="alert alert-danger d-none" role="alert"></div>
+
+
     <div class="container-fluid bg-custom-2">
       <div class="container-fluid">
-          <div class="row text-center text-white">
-              <div class="col py-3">
-                <img src="assets/imgs/profile.jpg" class="rounded-circle shadow" alt="Profile Picture" width="150" height="150 ">
-                <h2 class="profile-name mt-3">Christine Pearl Aboc</h2>
-                <h5>Admin</h5>
-                 <a href="edit1.html"> <button class="btn btn-secondary edit-profile-button">Edit Profile</button></a>
-              </div>
+        <div class="row text-center">
+          <div class="col py-3">
+            <img id="user_avatar" src="profile.jpg" alt="Profile Avatar" style="width: 140px; height: 140px; border-radius: 50%;">
+            <h2 class="profile-name"></h2>
+            <a href="edit1.html"> <button class="btn btn-secondary edit-profile-button">Edit Profile Admin</button></a>
           </div>
-      </div>
-  </div>
-  
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center text-white">          
-                <p class="profile-contact-info">
-                  <h3> <strong>Details: </strong></h3>
-                  <span class="profile-city">Address: Ampayon, Butuan City</span><br>
-                  <span class="profile-phone">Phone no: 09127383777</span><br>
-                  <span class="profile-email">Email: p*******8@gmail.com</span>
-
-                </p>
-            </div>
         </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-center">
+          <p class="profile-contact-info">
+            <div>
+              <h4 id="full_name" style="color: azure;"></h4>
+              <p id="phone_no" style="color: azure;"></p>
+          </div>
+          </p>
+        </div>
+      </div>
     </div>
 
-    <hr>
-
     <nav class="navbar bg-custom-2 fixed-bottom">
-      
-        <div class="col d-flex justify-content-evenly align-items-center gap-2">
-          
-          <a class="btn" href="admin.html" role="button"><i class="fa fa-home" style="font-size: 1.5rem;"></i><br>Home</a>
-          <a class="btn" href="notification1.html" role="button">
-            <i class="fa fa-bell" style="font-size: 1.5rem;"></i><br>Notification</a>
-          <a class="btn" href="transaction1.html" role="button"><i class="fa fa-credit-card" style="font-size: 1.5rem;"></i><br>Transaction</a>
-          <a class="btn" href="profile1.html" role="button"><i class="fa fa-user-circle" style="font-size: 1.5rem;"></i><br>Profile</a>
-    
-       </div>
-  
-   </nav>
+      <div class="col d-flex justify-content-evenly align-items-center gap-2">
+        <a class="btn" href="main.html" role="button"><i class="fa fa-home" style="font-size: 1.5rem;"></i><br />Home</a>
+        <a class="btn" href="notification.html" role="button">
+          <i class="fa fa-bell" style="font-size: 1.5rem;"></i><br />Notification</a>
+        <a class="btn" href="transaction.html" role="button"><i class="fa fa-credit-card" style="font-size: 1.5rem;"></i><br />Transaction</a>
+        <a class="btn" href="profile.html" role="button"><i class="fa fa-user-circle" style="font-size: 1.5rem;"></i><br />Profile</a>
+      </div>
+    </nav>
 
 
+    <script src="/js/system/profile1.js" type="module"></script>
   </body>
 </html>
