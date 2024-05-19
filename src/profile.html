@@ -76,11 +76,12 @@
     <div class="alert alert-success d-none" role="alert"></div>
     <div class="alert alert-danger d-none" role="alert"></div>
 
+
     <div class="container-fluid bg-custom-2">
       <div class="container-fluid">
         <div class="row text-center">
           <div class="col py-3">
-            <img src="assets/imgs/profile.jpg" class="rounded-circle shadow" alt="Profile Picture" width="150" height="150" />
+            <img id="user_avatar" src="profile.jpg" alt="Profile Avatar" style="width: 140px; height: 140px; border-radius: 50%;">
             <h2 class="profile-name"></h2>
             <a href="edit.html"> <button class="btn btn-secondary edit-profile-button">Edit Profile</button></a>
           </div>
@@ -93,10 +94,8 @@
         <div class="col text-center">
           <p class="profile-contact-info">
             <div>
-              <h2>User Details</h2>
-
-              <div id="full_name">Full Name</div>
-              <div id="phone_no">Phone Number</div>
+              <h4 id="full_name" style="color: azure;"></h4>
+              <p id="phone_no" style="color: azure;"></p>
           </div>
           </p>
         </div>

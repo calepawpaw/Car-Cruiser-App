@@ -1,86 +1,68 @@
 import { supabase, successNotification, errorNotification } from "../main";
 
-
 const form_login = document.getElementById("login_form");
 
 login_form.onsubmit = async (e) => {
     e.preventDefault();
-     //Disable button
-     document.querySelector("#login_form button").disabled = true;
-     document.querySelector("#login_form button").innerHTML = '<div class="spinner-border me-2" role="status"></div>';
+
+    // Disable the button and show a spinner
+    const loginButton = document.querySelector("#login_form button");
+    loginButton.disabled = true;
+    loginButton.innerHTML = '<div class="spinner-border me-2" role="status"></div>';
 
     const formData = new FormData(login_form);
 
-    //supabase sign-in
-let { data, error } = await supabase.auth.signInWithPassword({
-  email: formData.get("email"),
-  password: formData.get("password"),
-});
+    // Attempt to sign in
+    let { data, error } = await supabase.auth.signInWithPassword({
+        email: formData.get("email"),
+        password: formData.get("password"),
+    });
 
-let session = data.session;
-let user = data.user;
-const userId = data.user.id;
+    if (error) {
+        errorNotification("Login failed: " + error.message, 2);
+        console.error(error);
+    } else if (data) {
+        let session = data.session;
+        let user = data.user;
+        const userId = user.id;
 
-console.log(user);
+        console.log(user);
 
-if (session != null) {
-  // Store tokens for API
-  localStorage.setItem("access_token", session.access_token);
-  localStorage.setItem("refresh_token", session.refresh_token);
-  localStorage.setItem("userId", userId);
+        if (session) {
+            localStorage.setItem("access_token", session.access_token);
+            localStorage.setItem("refresh_token", session.refresh_token);
+            localStorage.setItem("userId", userId);
 
-  // Retrieve user information
-  let { data: user_info, error } = await supabase
-      .from("user_info")
-      .select("*")
-      .eq("user_id", user.id);
+            // Retrieve user information
+            let { data: user_info, error } = await supabase
+                .from("user_info")
+                .select("*")
+                .eq("user_id", userId);
 
-      localStorage.setItem("role", user_info[0].role);
-      
-  if (user_info.length > 0) {
-      const user_role = user_info[0].role;
+            if (error) {
+                errorNotification("Failed to fetch user information: " + error.message, 2);
+                console.error(error);
+            } else if (user_info && user_info.length > 0) {
+                localStorage.setItem("role", user_info[0].role);
+                const user_role = user_info[0].role;
 
-      // Check if user is an admin
-      if (user_role === "admin") {
-          // Redirect to admin page
-          window.location.pathname = '/admin.html';
-      } else {
-          // For non-admin users, redirect to main page
-          window.location.pathname = '/main.html';
-      }
+                if (user_role === "admin") {
+                    window.location.pathname = '/admin.html';
+                } else {
+                    window.location.pathname = '/main.html';
+                }
 
-      successNotification("Login Successfully!");
-  } else {
-      errorNotification("Cannot fetch user information", 2);
-  }
-} else {
-  errorNotification("Cannot login account", 2);
-  console.log(error);
-}
+                successNotification("Login Successfully!");
+            } else {
+                errorNotification("No user information found", 2);
+            }
+        } else {
+            errorNotification("No session available", 2);
+        }
+    }
 
-
-    // Resetting form
+    // Reset form and re-enable the button
     form_login.reset();
-     //Enable submit button
-     document.querySelector("#login_form button").disabled = false;
-     document.querySelector("#login_form button").innerHTML = 'login';
-
-    
+    loginButton.disabled = false;
+    loginButton.innerHTML = 'Login';
 };
-
-
-// // // const login_form = document.getElementById("login_form");
-
-// // // login_form.onsubmit = async (e) => {
-// // //     e.preventDefault();
-
-// // //     //Get all Values from input, select, textarea under form tag
-// // //     const formData = new FormData(login_form);
-
-// // //     let { data, error } = await supabase.auth.signInWithPassword({
-// // //         email: formData.get("email"),
-// // //         password: formData.get("password"),
-// // //       });
-
-// // //       console.log(data);
-// // // }

@@ -24,19 +24,16 @@ async function getData() {
       return;
   }
 
-  console.log('User info:', user_info);
+  const fullNameElem = document.getElementById("full_name");
+  const phoneNoElem = document.getElementById("phone_no");
+  const avatarElem = document.getElementById("user_avatar"); // Ensure this ID matches your image element in HTML
 
-const fullNameElem = document.getElementById("full_name");
-const phoneNoElem = document.getElementById("phone_no");
-
-console.log('Elements:', { fullNameElem, phoneNoElem });
-
-if (fullNameElem && phoneNoElem) {
-    fullNameElem.textContent = `${user_info.firstname || 'No first name'} ${user_info.lastname || 'No last name'}`;
-    phoneNoElem.textContent = `Contact #: ${user_info.phone_no || 'No phone number'}`;
-} else {
-    console.error("One or more elements are missing from the DOM.");
+  if (fullNameElem && phoneNoElem && avatarElem) {
+      fullNameElem.textContent = `${user_info.firstname || 'No first name'} ${user_info.lastname || 'No last name'}`;
+      phoneNoElem.textContent = `Contact #: ${user_info.phone_no || 'No phone number'}`;
+      avatarElem.src = user_info.image_path || 'assets/imgs/profile.jpg'; // Fallback to default if null
+  } else {
+      console.error("One or more elements are missing from the DOM.");
+      errorNotification("Unable to load some profile elements.");
+  }
 }
-
-}
-
